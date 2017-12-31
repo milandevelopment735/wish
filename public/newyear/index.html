@@ -117,6 +117,8 @@
             }
             var name = getSearchParams('name');
             if(name){
+                name = name.replace("-", " ");
+
                 $("#namehere").text(name);
                 $("#secondName").text(name);
             }
