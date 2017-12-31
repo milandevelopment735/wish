@@ -126,6 +126,7 @@
                 if($("#TextName").val() !== "" && $("#TextName").val() !== "undefined"){
                     $("#namehere").text($("#TextName").val());
                     $("#secondName").text($("#TextName").val());
+                    localStorage.setItem('name', $("#TextName").val())
                     $("#myForm").attr("action", "name.html?name="+$("#name").val());
                     $("#myForm").submit();       
                 }else{
