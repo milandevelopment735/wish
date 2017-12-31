@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+
+<!-- Mirrored from laaris.com/coming-soon-5/conffeti.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2017 04:54:26 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy New Year | Wish</title>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
+<style type="text/css">
+    .footbit {
+        border-radius: 5px;
+          padding: 5px;
+          position: fixed;
+          left:0px;
+          bottom:0px;
+          height:50px;
+          width:100%;
+          background:#34af23;
+          font-size: 16px;
+          text-align: center;
+          text-decoration: none;
+          z-index: 1;
+    }
+    .color_white{
+        font-family: 'Raleway', sans-serif;
+    }
+    .myFont {
+        font-family: 'Raleway', sans-serif;
+    }
+    .wrapper{
+        margin-bottom: 100px;
+    }
+</style>
+</head>
+<body class="version_10">
+
+<!-- ============== LOADER ============== -->
+<div class="loader-bg">
+    <div class="loader">
+        <div class="loader-circles">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+</div>
+<canvas id="confetti"></canvas>
+<!-- ============== WRAPPER ============== -->
+<div class="wrapper">
+    <div class="content_home text-center">
+        <h3 style='font-size: 30px;' class="color_white animated infinite tada" id='namehere'>Milan Patel</h3>
+        <h3 class='myFont' style='color:white;'>Wishing You</h3>
+        <div class="space"></div>
+        <img src="images/newyear.gif" style='width:250px;'>
+        <div class="space"></div>
+        <p class='color_white' style='font-size:20px;'>हैप्पी न्यू इयर 2018,
+क्योंकि कविराज <br> कबीर जी ने कहा है,
+कल करे सो आज कर,<br> आज करे सो अब,
+नेटवर्क बिझी हो जायेगा तो <br> विश करेगा कब?</p>
+        <p class='color_white' id='secondName'></p>
+        <!-- <button type="button" class="btn color-white background_green_blue" data-toggle="modal" data-target="#subscribe">
+            Notify Me!
+        </button> -->
+        <!-- ============== COUNTDOWN ============== -->
+        <!-- <div class="countdown">
+            <p><b>Launching in:</b></p>
+            <ul id="countdown"></ul>
+        </div> -->
+    </div>
+</div>
+
+<div class='footbit'>
+    <form id='myForm'>
+        <input type='text' name='name' id='TextName' placeholder='Enter Your Name' />
+        <input type='button' id='goBtn' value='Go' class="btn color-white background_green_blue">
+    </form>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/modernizr.js"></script>
+<script type="text/javascript" src="js/respond.min.js"></script>
+<script type="text/javascript" src="js/html5shiv.js"></script>
+
+<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="js/gallery.js"></script>
+<script type="text/javascript" src="js/conffeti.js"></script>
+
+<script type="text/javascript" src="js/contact.js"></script>
+<script type="text/javascript" src="js/validator.js"></script>
+
+<script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            function getSearchParams(k){
+                var p={};
+                location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){p[k]=v})
+                return k?p[k]:p;
+            }
+            var name = getSearchParams('name');
+            if(name){
+                $("#namehere").text(name);
+                $("#secondName").text(name);
+            }
+            $("#goBtn").click(function(event){
+                if($("#TextName").val() !== "" && $("#TextName").val() !== "undefined"){
+                    $("#namehere").text($("#TextName").val());
+                    $("#secondName").text($("#TextName").val());
+                    $("#myForm").attr("action", "name.html?name="+$("#name").val());
+                    $("#myForm").submit();       
+                }else{
+                    event.preventDefault();
+                    alert("Please Enter Name");
+                }
+            })
+        });
+    </script>
+</body>
+<!-- Mirrored from laaris.com/coming-soon-5/conffeti.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2017 04:54:26 GMT -->
+</html>
